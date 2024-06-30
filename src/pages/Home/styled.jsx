@@ -33,6 +33,7 @@ export const Card = styled.div`
   padding: 1em;
   border-radius: 8px;
   margin-bottom: 3rem;
+  overflow: hidden;
 
   div {
     height: 25vh;

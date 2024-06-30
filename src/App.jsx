@@ -12,7 +12,7 @@ export default function App() {
     {
       nome: "Apple iPhone 14",
       descricao:
-        "O iPhone 14 tem o sistema de câmera dupla mais impressionante em um iPhone, para fazer fotos espetaculares em pouca e muita luz.",
+        "O iPhone 14 tem o sistema de câmera dupla mais impressionante do mundo.",
       imagem: "https://m.media-amazon.com/images/I/41t1UNX2zHL._AC_UL320_.jpg",
       preco: 3579,
       quantidade: 5,
