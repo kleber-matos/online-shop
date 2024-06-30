@@ -19,6 +19,10 @@ export const Section = styled.header`
 `;
 
 export const Logo = styled.div`
+  a {
+    display: flex;
+  }
+
   ${Center}
   width: 40%;
   max-width: 320px;

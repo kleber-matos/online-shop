@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import CarrinhoIcon from "../carrinhoIcon.jsx";
 
-export default function index() {
+export default function index({ buscaOn }) {
   const { quantidade, setBusca, busca } = useContext(CartContext);
 
   return (
@@ -16,8 +16,10 @@ export default function index() {
       <section>
         <S.Section>
           <S.Logo>
-            <FaStoreAlt className="icon" />
-            <h2>ONLINE SHOP</h2>
+            <Link to="/">
+              <FaStoreAlt className="icon" />
+              <h2>ONLINE SHOP</h2>
+            </Link>
           </S.Logo>
           <S.Cart>
             <FaUser className="icon" />
@@ -31,20 +33,24 @@ export default function index() {
         <S.Section>
           <S.Nav>
             <ul>
-              <li>Home</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
               <li>Sobre</li>
               <li>Contato</li>
             </ul>
           </S.Nav>
-          <S.Busca>
-            <input
-              onChange={(e) => setBusca(e.target.value)}
-              placeholder="Buscar produto..."
-              type="text"
-              value={busca}
-            />
-            <FaSearch />
-          </S.Busca>
+          {buscaOn && (
+            <S.Busca>
+              <input
+                onChange={(e) => setBusca(e.target.value)}
+                placeholder="Buscar produto..."
+                type="text"
+                value={busca}
+              />
+              <FaSearch />
+            </S.Busca>
+          )}
         </S.Section>
       </section>
     </S.Header>

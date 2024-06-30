@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaStoreAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function index() {
   return (
@@ -13,6 +14,9 @@ export default function index() {
           <div>
             <h3>Links importantes</h3>
             <ul>
+              <li>
+                <Link to="/cart">Carrinho</Link>
+              </li>
               <li>
                 <a href="#">Sobre</a>
               </li>

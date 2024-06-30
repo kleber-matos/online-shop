@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header buscaOn={true} />
 
       <S.Oferta>
         <h2>Ofertas do dia!</h2>
@@ -48,7 +48,11 @@ export default function Home() {
             </S.Card>
           ))}
 
-          {searchFilter == "" ? <AvisoBusca /> : ""}
+          {searchFilter == "" ? (
+            <AvisoBusca sobre={"Produto não encontrado..."} />
+          ) : (
+            ""
+          )}
         </div>
       </S.Produtos>
       <Footer />
