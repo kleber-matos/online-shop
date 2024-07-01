@@ -8,6 +8,7 @@ import Footer from "../../components/Footer";
 import Aviso from "../../components/Aviso";
 
 import { FaTrash } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 export default function Cart() {
   const { carrinho, setCarrinho, quantidade, setQuantidade } =
@@ -27,10 +28,29 @@ export default function Cart() {
   };
 
   const finalizar = () => {
-    setFinalizado(true);
-    setTimeout(() => {
-      window.location.pathname = "/";
-    }, 7000);
+    let timerInterval;
+    Swal.fire({
+      title: "Obrigado(a), volte sempre!",
+      html: "Finalizando seu pedido em <b></b> m/s.",
+      timer: 4000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+        window.location.pathname = "/";
+      },
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+      }
+    });
   };
 
   return (

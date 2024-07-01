@@ -7,6 +7,12 @@ import Header from "../../components/Header/index";
 import Footer from "../../components/Footer";
 import Aviso from "../../components/Aviso";
 
+import Swal from "sweetalert2";
+
+import { FaCheckCircle } from "react-icons/fa";
+
+import ok from "../../assets/ok.png";
+
 export default function Home() {
   const { carrinho, setCarrinho, Produtos, setQuantidade, busca } =
     useContext(CartContext);
@@ -16,6 +22,13 @@ export default function Home() {
     filtrado.id = Math.random() * 1;
     setCarrinho(carrinho.concat(filtrado));
     setQuantidade(carrinho.length + 1);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Adicionado ao carrinho",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   };
 
   const searchFilter = Produtos.filter((item) =>
