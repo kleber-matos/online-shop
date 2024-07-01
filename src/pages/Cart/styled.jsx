@@ -24,6 +24,13 @@ export const Container = styled.section`
     justify-content: space-between;
     width: 80%;
   }
+
+  @media (max-width: 990px) {
+    section {
+      /* border: solid; */
+      flex-direction: column-reverse;
+    }
+  }
 `;
 
 export const Resumo = styled.div`
@@ -34,6 +41,12 @@ export const Resumo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 990px) {
+    /* border: red solid; */
+    width: 100%;
+    max-width: 1000px;
+  }
 `;
 
 export const Itens = styled.div`
@@ -44,6 +57,11 @@ export const Itens = styled.div`
 
   img {
     width: 50px;
+  }
+
+  @media (max-width: 990px) {
+    /* border: red solid; */
+    width: 100%;
   }
 `;
 
@@ -60,7 +78,6 @@ export const Info = styled.div`
 
   span {
     text-align: end;
-
     width: 20%;
   }
 
@@ -68,6 +85,18 @@ export const Info = styled.div`
     width: 20%;
     max-width: 100px;
     height: 10vh;
+  }
+
+  @media (max-width: 990px) {
+    .hidde {
+      display: none;
+    }
+
+    p {
+      font-size: 0.6em;
+      /* border: solid; */
+      width: 70%;
+    }
   }
 `;
 
@@ -83,6 +112,12 @@ export const Preco = styled.div`
     border: none;
     cursor: pointer;
     font-size: 1.2em;
+  }
+
+  @media (max-width: 990px) {
+    p {
+      font-size: 0.7em;
+    }
   }
 `;
 
@@ -110,5 +145,12 @@ export const Buttons = styled.div`
     background-color: #d13737;
     color: #dfdfdf;
     border: none;
+  }
+
+  @media (max-width: 990px) {
+    margin-top: 5px;
+    button {
+      height: 5vh;
+    }
   }
 `;

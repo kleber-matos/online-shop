@@ -59,7 +59,9 @@ export default function Cart() {
                     <S.Info>
                       <img src={item.imagem} alt={item.nome} />
                       <p>{item.descricao}</p>
-                      <span>Código do produto: {item.id}</span>
+                      <span className="hidde">
+                        Código do produto: {item.id}
+                      </span>
                     </S.Info>
 
                     <S.Preco>

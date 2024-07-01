@@ -31,6 +31,15 @@ const Div = styled.div`
     width: 30%;
     max-width: 200px;
   }
+
+  @media (max-width: 990px) {
+    font-size: 0.7em;
+    height: 60vh;
+
+    div {
+      width: 90%;
+    }
+  }
 `;
 
 export default function index() {

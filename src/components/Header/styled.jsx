@@ -106,9 +106,9 @@ export const Busca = styled.div`
   cursor: pointer;
   border-radius: 5px;
   padding-right: 10px;
-  height: 3vh;
   width: 30%;
   max-width: 300px;
+  height: 4vh;
 
   input {
     border: none;
@@ -120,7 +120,6 @@ export const Busca = styled.div`
 
   @media (max-width: 990px) {
     width: 70%;
-
     display: flex;
   }
 `;

@@ -43,6 +43,15 @@ const Div = styled.div`
     color: white;
     transition: 0.4s;
   }
+
+  @media (max-width: 990px) {
+    font-size: 0.5em;
+
+    div {
+      width: 90%;
+      height: 15vh;
+    }
+  }
 `;
 
 export default function index({ sobre, icon }) {

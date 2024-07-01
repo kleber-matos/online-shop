@@ -14,6 +14,7 @@ export const Links = styled.footer`
   display: flex;
   align-items: center;
   height: 20vh;
+  /* border: solid green; */
 
   div {
     width: 30%;
@@ -44,12 +45,46 @@ export const Links = styled.footer`
     display: flex;
     align-items: center;
   }
+
+  @media (max-width: 990px) {
+    height: 30vh;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    div {
+      display: flex;
+      /* border: solid red; */
+      flex-direction: column;
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    li {
+      font-size: 0.7em;
+    }
+  }
 `;
 
 export const Dev = styled.section`
+  /* border: solid; */
   margin-bottom: 2rem;
 
   span {
     font-weight: 600;
+  }
+
+  @media (max-width: 990px) {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 0.9em;
+    }
   }
 `;
