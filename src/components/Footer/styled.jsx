@@ -11,16 +11,15 @@ export const Container = styled.section`
 `;
 
 export const Links = styled.footer`
+  height: 20vh;
   display: flex;
   align-items: center;
-  height: 20vh;
-  /* border: solid green; */
 
   div {
     width: 30%;
     height: 15vh;
-    margin-right: 5px;
     padding: 5px;
+    margin-right: 5px;
   }
 
   h3,
@@ -70,7 +69,6 @@ export const Links = styled.footer`
 `;
 
 export const Dev = styled.section`
-  /* border: solid; */
   margin-bottom: 2rem;
 
   span {
@@ -80,8 +78,8 @@ export const Dev = styled.section`
   @media (max-width: 990px) {
     height: 15vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     p {
       font-size: 0.9em;

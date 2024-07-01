@@ -1,10 +1,7 @@
 import React from "react";
 import * as S from "./styled";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaStoreAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin, FaInstagram, FaStoreAlt } from "react-icons/fa";
 
 export default function index() {
   return (
@@ -29,15 +26,24 @@ export default function index() {
             <h3>Minhas redes</h3>
             <ul>
               <li>
-                <a href="#">LinkedIn</a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/kleber-matos/"
+                >
+                  LinkedIn
+                </a>
                 <FaLinkedin />
               </li>
               <li>
-                <a href="#">GitHub </a>
+                <a target="_black" href="https://github.com/kleber-matos">
+                  GitHub
+                </a>
                 <FaGithub />
               </li>
               <li>
-                <a href="#">Instagram</a>
+                <a target="_blank" href="https://www.instagram.com/kleber_sk/">
+                  Instagram
+                </a>
                 <FaInstagram />
               </li>
             </ul>

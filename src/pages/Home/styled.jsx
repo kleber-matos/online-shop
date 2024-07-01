@@ -1,13 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Produtos = styled.section`
+const Center = css`
   display: flex;
   justify-content: center;
+  align-items: center;
+`;
+
+export const Produtos = styled.section`
+  ${Center}
   border: solid;
 
   div {
     width: 80%;
-    display: flex;
+    ${Center}
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
@@ -15,16 +20,14 @@ export const Produtos = styled.section`
 
 export const Oferta = styled.section`
   height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${Center}
   h2 {
     font-size: 2em;
   }
 `;
 
 export const BoxProdutos = styled.div`
-  display: flex;
+  ${Center}
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 84%;
@@ -37,6 +40,5 @@ export const BoxProdutos = styled.div`
 `;
 
 export const Container = styled.section`
-  display: flex;
-  justify-content: center;
+  ${Center}
 `;

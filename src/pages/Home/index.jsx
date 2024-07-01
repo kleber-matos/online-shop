@@ -1,22 +1,19 @@
 import React, { useContext } from "react";
-import Header from "../../components/Header/index";
 import * as S from "./styled";
 
-import CardProduto from "../../components/CardProduto";
-
-import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import Aviso from "../../components/Aviso";
+import CardProduto from "../../components/CardProduto";
+import Header from "../../components/Header/index";
 import Footer from "../../components/Footer";
+import Aviso from "../../components/Aviso";
 
 export default function Home() {
-  const { carrinho, setCarrinho, Produtos, quantidade, setQuantidade, busca } =
+  const { carrinho, setCarrinho, Produtos, setQuantidade, busca } =
     useContext(CartContext);
 
   const adicionarCarrinho = (id) => {
     const filtrado = Produtos.find((e) => e.id === id);
     filtrado.id = Math.random() * 1;
-    console.log(filtrado);
     setCarrinho(carrinho.concat(filtrado));
     setQuantidade(carrinho.length + 1);
   };
@@ -27,11 +24,15 @@ export default function Home() {
 
   return (
     <>
-      <Header buscaOn={true} />
+      <Header buscaOn />
 
-      <S.Oferta>
-        <h2>Ofertas do dia!</h2>
-      </S.Oferta>
+      {searchFilter == "" ? (
+        <Aviso sobre={"Produto não encontrado..."} />
+      ) : (
+        <S.Oferta>
+          <h2>Ofertas do dia!</h2>
+        </S.Oferta>
+      )}
 
       <S.Container>
         <S.BoxProdutos>
@@ -47,12 +48,6 @@ export default function Home() {
               />
             </div>
           ))}
-
-          {searchFilter == "" ? (
-            <Aviso sobre={"Produto não encontrado..."} />
-          ) : (
-            ""
-          )}
         </S.BoxProdutos>
       </S.Container>
 

@@ -1,11 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const Center = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const Card = styled.div`
   display: flex;
+  margin: 1rem;
   overflow: hidden;
   padding: 10px;
   border-radius: 10px;
-  margin: 1rem;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
@@ -16,60 +22,56 @@ export const Card = styled.div`
 
 export const Container = styled.section`
   display: flex;
-  justify-content: center;
   min-height: 51vh;
+  justify-content: center;
 
   section {
+    width: 80%;
     display: flex;
     justify-content: space-between;
-    width: 80%;
   }
 
   @media (max-width: 990px) {
     section {
-      /* border: solid; */
       flex-direction: column-reverse;
     }
   }
 `;
 
 export const Resumo = styled.div`
-  margin-top: 1.7rem;
   width: 30%;
   max-width: 300px;
   height: 23vh;
   display: flex;
+  margin-top: 1.7rem;
   flex-direction: column;
   justify-content: space-between;
 
   @media (max-width: 990px) {
-    /* border: red solid; */
     width: 100%;
     max-width: 1000px;
   }
 `;
 
 export const Itens = styled.div`
-  padding: 10px;
   width: 55%;
-  border-radius: 10px;
+  padding: 10px;
   max-width: 1000px;
+  border-radius: 10px;
 
   img {
     width: 50px;
   }
 
   @media (max-width: 990px) {
-    /* border: red solid; */
     width: 100%;
   }
 `;
 
 export const Info = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${Center}
   height: 20vh;
+  justify-content: space-between;
 
   p {
     width: 45%;
@@ -77,14 +79,14 @@ export const Info = styled.div`
   }
 
   span {
-    text-align: end;
     width: 20%;
+    text-align: end;
   }
 
   img {
     width: 20%;
-    max-width: 100px;
     height: 10vh;
+    max-width: 100px;
   }
 
   @media (max-width: 990px) {
@@ -93,25 +95,22 @@ export const Info = styled.div`
     }
 
     p {
-      font-size: 0.6em;
-      /* border: solid; */
       width: 70%;
+      font-size: 0.6em;
     }
   }
 `;
 
 export const Preco = styled.div`
-  display: flex;
-  justify-content: space-between;
+  ${Center}
   height: 5vh;
-  display: flex;
-  align-items: center;
+  justify-content: space-between;
 
   button {
-    background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 1.2em;
+    background-color: transparent;
   }
 
   @media (max-width: 990px) {
@@ -126,29 +125,30 @@ export const Buttons = styled.div`
   justify-content: space-between;
 
   button {
+    width: 49%;
+    height: 3vh;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
     border: solid 2px #2f4f4f;
     background-color: transparent;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 3px;
-    height: 3vh;
-    width: 49%;
   }
 
   button:hover {
-    background-color: #2f4f4f;
     color: white;
     transition: 0.4s;
+    background-color: #2f4f4f;
   }
 
   .cancelar:hover {
-    background-color: #d13737;
-    color: #dfdfdf;
     border: none;
+    color: #dfdfdf;
+    background-color: #d13737;
   }
 
   @media (max-width: 990px) {
     margin-top: 5px;
+
     button {
       height: 5vh;
     }

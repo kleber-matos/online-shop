@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 
 const Center = css`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Header = styled.header`
@@ -12,14 +12,13 @@ export const Header = styled.header`
 `;
 export const Section = styled.header`
   ${Center}
-  justify-content: space-between;
   width: 80vw;
-  max-width: 1600px;
   height: 11vh;
+  max-width: 1600px;
+  justify-content: space-between;
 
   @media (max-width: 990px) {
     height: 10vh;
-    justify-content: space-between;
     flex-wrap: wrap;
   }
 `;
@@ -61,8 +60,8 @@ export const Logo = styled.div`
 
 export const Cart = styled.div`
   ${Center}
-  color: #2f4f4f;
   width: 15%;
+  color: #2f4f4f;
   max-width: 100px;
   justify-content: space-between;
 
@@ -101,21 +100,21 @@ export const Nav = styled.nav`
 
 export const Busca = styled.div`
   ${Center}
-  justify-content: space-between;
-  background-color: white;
+  width: 30%;
+  height: 4vh;
   cursor: pointer;
+  max-width: 300px;
   border-radius: 5px;
   padding-right: 10px;
-  width: 30%;
-  max-width: 300px;
-  height: 4vh;
+  background-color: white;
+  justify-content: space-between;
 
   input {
-    border: none;
-    padding-left: 10px;
-    font-weight: 600;
-    outline: none;
     width: 90%;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    padding-left: 10px;
   }
 
   @media (max-width: 990px) {

@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
+import * as S from "./styled.jsx";
+
+import CompraFinalizada from "../../components/CompraFinalizada";
 import { CartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
 import Header from "../../components/Header/index";
 import Footer from "../../components/Footer";
-import { FaTrash } from "react-icons/fa";
 import Aviso from "../../components/Aviso";
-import CompraFinalizada from "../../components/CompraFinalizada";
 
-import * as S from "./styled.jsx";
+import { FaTrash } from "react-icons/fa";
 
 export default function Cart() {
   const { carrinho, setCarrinho, quantidade, setQuantidade } =
@@ -41,15 +41,7 @@ export default function Cart() {
         <Aviso icon sobre={"Seu carrinho está vazio"} />
       ) : (
         <>
-          {/* <h1>Carrinho</h1>
-          <Link to="/">Voltar</Link>
-          <h2>quantidade: {quantidade}</h2>
-          <button onClick={() => removerTodos()}>remover todos os itens</button>
-          <h2>
-            Total: {carrinho.reduce((valor, item) => valor + item.preco, 0)}
-          </h2> */}
-
-          {finalizado ? <CompraFinalizada /> : ""}
+          {finalizado && <CompraFinalizada />}
 
           <S.Container>
             <section>
@@ -89,6 +81,7 @@ export default function Cart() {
                     </span>
                     ,00
                   </h2>
+
                   <S.Buttons>
                     <button onClick={() => cancelar()} className="cancelar">
                       Cancelar
