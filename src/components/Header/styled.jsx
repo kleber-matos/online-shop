@@ -16,6 +16,12 @@ export const Section = styled.header`
   width: 80vw;
   max-width: 1600px;
   height: 11vh;
+
+  @media (max-width: 990px) {
+    height: 10vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Logo = styled.div`
@@ -33,6 +39,24 @@ export const Logo = styled.div`
   .icon {
     font-size: 2em;
   }
+
+  @media (max-width: 990px) {
+    width: 50%;
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 0.6em;
+      margin-left: 5px;
+    }
+
+    .icon {
+      font-size: 1.5em;
+    }
+  }
 `;
 
 export const Cart = styled.div`
@@ -46,6 +70,14 @@ export const Cart = styled.div`
     font-size: 2em;
     cursor: pointer;
   }
+
+  @media (max-width: 990px) {
+    width: 30%;
+
+    .icon {
+      font-size: 1.7em;
+    }
+  }
 `;
 
 export const Nav = styled.nav`
@@ -58,6 +90,12 @@ export const Nav = styled.nav`
 
   li {
     font-weight: 800;
+  }
+
+  @media (max-width: 990px) {
+    .hidde {
+      display: none;
+    }
   }
 `;
 
@@ -78,6 +116,12 @@ export const Busca = styled.div`
     font-weight: 600;
     outline: none;
     width: 90%;
+  }
+
+  @media (max-width: 990px) {
+    width: 70%;
+
+    display: flex;
   }
 `;
 

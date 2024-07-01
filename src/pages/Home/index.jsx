@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import Header from "../../components/Header/index";
 import * as S from "./styled";
 
+import CardProduto from "../../components/CardProduto";
+
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import AvisoBusca from "../../components/AvisoBusca";
+import Aviso from "../../components/Aviso";
 import Footer from "../../components/Footer";
 
 export default function Home() {
@@ -31,30 +33,29 @@ export default function Home() {
         <h2>Ofertas do dia!</h2>
       </S.Oferta>
 
-      <S.Produtos>
-        <div>
+      <S.Container>
+        <S.BoxProdutos>
           {searchFilter.map((item, index) => (
-            <S.Card key={index}>
-              <div>
-                <img src={item.imagem} alt={item.nome} />
-              </div>
-              <h2>{item.nome}</h2>
-              <p>{item.descricao}</p>
-              <S.Span cor={item.etiqueta}>{item.etiqueta}</S.Span>
-              <p className="preco">R$ {item.preco.toFixed(2)}</p>
-              <button onClick={() => adicionarCarrinho(item.id)}>
-                Comprar
-              </button>
-            </S.Card>
+            <div onClick={() => adicionarCarrinho(item.id)}>
+              <CardProduto
+                key={index}
+                imagem={item.imagem}
+                titulo={item.nome}
+                descricao={item.descricao}
+                etiqueta={item.etiqueta}
+                preco={item.preco}
+              />
+            </div>
           ))}
 
           {searchFilter == "" ? (
-            <AvisoBusca sobre={"Produto não encontrado..."} />
+            <Aviso sobre={"Produto não encontrado..."} />
           ) : (
             ""
           )}
-        </div>
-      </S.Produtos>
+        </S.BoxProdutos>
+      </S.Container>
+
       <Footer />
     </>
   );

@@ -16,7 +16,7 @@ export default function index({ buscaOn }) {
       <section>
         <S.Section>
           <S.Logo>
-            <Link to="/">
+            <Link className="logo" to="/">
               <FaStoreAlt className="icon" />
               <h2>ONLINE SHOP</h2>
             </Link>
@@ -36,8 +36,8 @@ export default function index({ buscaOn }) {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li>Sobre</li>
-              <li>Contato</li>
+              <li className="hidde">Sobre</li>
+              <li className="hidde">Contato</li>
             </ul>
           </S.Nav>
           {buscaOn && (

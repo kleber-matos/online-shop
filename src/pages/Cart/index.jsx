@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header/index";
 import Footer from "../../components/Footer";
 import { FaTrash } from "react-icons/fa";
-import AvisoBusca from "../../components/AvisoBusca";
+import Aviso from "../../components/Aviso";
 import CompraFinalizada from "../../components/CompraFinalizada";
 
 import * as S from "./styled.jsx";
@@ -38,7 +38,7 @@ export default function Cart() {
       <Header buscaOn={false} />
 
       {quantidade == 0 ? (
-        <AvisoBusca icon sobre={"Seu carrinho está vazio"} />
+        <Aviso icon sobre={"Seu carrinho está vazio"} />
       ) : (
         <>
           {/* <h1>Carrinho</h1>
