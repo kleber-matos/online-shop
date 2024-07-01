@@ -69,6 +69,25 @@ export const Card = styled.div`
     color: white;
     transition: 0.4s;
   }
+
+  @media (max-width: 800px) {
+    img {
+      width: 40%;
+      height: 16vh;
+    }
+
+    p {
+      font-size: 0.6em;
+    }
+
+    h2 {
+      font-size: 1em;
+    }
+
+    button {
+      height: 4vh;
+    }
+  }
 `;
 
 export const Span = styled.span`
