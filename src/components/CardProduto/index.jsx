@@ -1,19 +1,26 @@
 import React from "react";
 import * as S from "./styled";
 
-export default function index({ imagem, titulo, descricao, preco, etiqueta }) {
+export default function ProductCard({
+  imagem,
+  titulo,
+  descricao,
+  preco,
+  etiqueta,
+}) {
   return (
-    <S.Card key={index}>
-      <div>
+    <S.Card>
+      <S.ImageContainer>
         <img src={imagem} alt={titulo} />
-      </div>
-      <h2>{titulo}</h2>
-      <p>{descricao}</p>
-      <S.Span cor={etiqueta}>{etiqueta}</S.Span>
+        {etiqueta && <S.Etiqueta cor={etiqueta}>{etiqueta}</S.Etiqueta>}
+      </S.ImageContainer>
 
-      <p className="preco">R$ {preco}</p>
-
-      <button>Comprar</button>
+      <S.Content>
+        <S.Title>{titulo}</S.Title>
+        <S.Description>{descricao}</S.Description>
+        <S.Price>R$ {preco}</S.Price>
+        <S.BuyButton>Adicionar ao carrinho</S.BuyButton>
+      </S.Content>
     </S.Card>
   );
 }

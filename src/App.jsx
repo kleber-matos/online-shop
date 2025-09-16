@@ -46,7 +46,7 @@ export default function App() {
       descricao:
         "11ª Geração com Tela de 6”, 16GB, Wi-Fi e Iluminação Embutida - Azul",
       imagem:
-        "https://www.atacadogames.com/imagem/tablets-e-readers/amazon-kindle-paperwhite-2022-16gb-preto/2/153500.jpg?pfdrid_c=true",
+        "https://images.kabum.com.br/produtos/fotos/magalu/683630/Kindle-2024-Amazon-6-16GB-Wi-Fi-Preto_1736189135_gg.jpg",
       preco: 455,
       quantidade: 5,
       id: 3,
